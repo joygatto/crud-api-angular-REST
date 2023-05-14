@@ -1,4 +1,4 @@
-# Applicazione Angular crud REST API
+# Applicazione Angular CRUD REST API
 Angular CLI: 13.2.6
 Node: 16.14.0
 Package Manager: npm 8.5.1
