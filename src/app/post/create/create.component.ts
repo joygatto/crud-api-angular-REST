@@ -1,5 +1,5 @@
-/*utilizzato per costruire il componente, il reactive form
-la cui logica è scritta nel file .ts a differenza del driven form
+/* Ho utilizzato il reactive form per costruire il componente, 
+la cui logica è scritta nel file .ts , a differenza del driven form
 la cui logica è scritta nel file html. Utilizzo form group per il controllo generale
 degli input e form control per il controllo del singolo campo di input.
 */
