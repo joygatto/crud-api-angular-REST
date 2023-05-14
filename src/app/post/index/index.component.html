@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Angular CRUD </h1>
+
+    <a href="#" routerLink="/post/create/" class="btn btn-success">Create New Post</a>
+
+    <table class="table table-striped">
+        <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Body</th>
+                <th width="250px">Action</th>
+              </tr>
+        </thead>
+        <tbody>
+              <!-- con ng for (direttiva strutturale) si ciclano i posts dell'API -->
+                <tr *ngFor="let post of posts">
+                <td>{{ post.id }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.body }}</td>
+                <td>
+                  <!--router link in questo caso passato come array indica nel primo
+                  elemento la rotta e negli altri due elementi i valori che passano-->
+
+                  <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a>
+                  <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>
+                </td>
+              </tr>
+        </tbody>
+    </table>
+ </div>
