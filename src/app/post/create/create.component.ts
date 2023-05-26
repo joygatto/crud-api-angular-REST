@@ -31,6 +31,8 @@ export class CreateComponent implements OnInit {
   }
 
   // Metodi
+  /*get f() rappresenta una getter function in TypeScript.
+  con f, viene restituito il valore della proprietà controls dell'oggetto form*/
   get f() {
 
     return this.form.controls;
@@ -40,8 +42,16 @@ export class CreateComponent implements OnInit {
   submit() {
 
     console.log(this.form.value);
+    /* this.postService.create(this.form.value):
+    Qui viene chiamato il metodo create() del servizio
+     postService, passando this.form.value come argomento. this.form.value rappresenta
+     i dati del nuovo "post" che si desidera creare. */
     this.postService.create(this.form.value).subscribe((res:any)=>{
+   /* Questo è il modo in cui si sottoscrive all'Observable per ricevere la risposta dalla richiesta HTTP.
+      Dentro la funzione di callback (res:any) => { ... },  */
+
       console.log('Post creato con successo!');
+      /*una volta creato il post torno all'index*/
       this.router.navigateByUrl('post/index');
     })
   }

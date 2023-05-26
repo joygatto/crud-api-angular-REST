@@ -15,3 +15,23 @@ API pubblica: API JSON PLACEHOLDER "https://jsonplaceholder.typicode.com".
 
 ## Development server
 ng serve da linea di comando cli.
+
+comandi CLI utilizzati:
+ ng new my-crud-app --routing
+
+npm install bootstrap --save 
+
+ng generate module post --routing
+
+ng generate component post/index
+
+ng generate component post/view
+
+ng generate component post/create
+
+ng generate component post/edit
+
+  ng generate interface post/post 
+  ng generate service post/post 
+
+  

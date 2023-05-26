@@ -19,9 +19,8 @@
                 <td>{{ post.title }}</td>
                 <td>{{ post.body }}</td>
                 <td>
-                  <!--router link in questo caso passato come array indica nel primo
-                  elemento la rotta e negli altri due elementi i valori che passano-->
-
+                  <!-- il link di navigazione generato utilizzando routerLink punta a una pagina di modifica per un post specifico.
+                  L'id del post viene utilizzato per costruire il percorso di navigazione dinamicamente -->
                   <a href="#" [routerLink]="['/post/', post.id, 'edit']" class="btn btn-primary">Edit</a>
                   <button type="button" (click)="deletePost(post.id)" class="btn btn-danger">Delete</button>
                 </td>

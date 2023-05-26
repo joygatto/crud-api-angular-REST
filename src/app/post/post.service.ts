@@ -15,10 +15,11 @@ import { Post } from './post';
 export class PostService {
 
   // URL API JSON PLACEHOLDER
-
   private apiURL = "https://jsonplaceholder.typicode.com";
 
   // Http Header options
+  /*  il codice imposta l'intestazione (headers) della richiesta
+  HTTP per avere il tipo di contenuto (Content-Type) impostato su application/json. Questo indica che il corpo della richiesta HTTP sarà formattato come un oggetto JSON.*/
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -32,8 +33,8 @@ export class PostService {
   constructor(private httpClient: HttpClient) { }
 
 
-  // Metodi CRUD applicati alle API che trasportano i posts come Osservable
-
+  // Metodi CRUD applicati alle API che trasportano i posts come Osservable-dammi tutti i dati json
+  // Il parametro <any> indica che il tipo dei valori emessi dall'Observable non è specificato o può essere di qualsiasi tipo.
   getAll(): Observable<any> {
 
     return this.httpClient.get(this.apiURL + '/posts/');
