@@ -32,9 +32,11 @@ export class EditComponent implements OnInit {
       this.post = data;
 
     });
-// tipo di form reactive oggetto FormGroup che rappresenta il gruppo di campi del form.
+/* tipo di form reactive oggetto FormGroup che rappresenta il gruppo di campi
+ del form.*/
     this.form = new FormGroup({
-     // Verificare che i campi non siano vuoti
+     /*verificare che i campi non siano vuoti.
+     Entrambi i campi richiedono che siano inseriti dei valori non vuoti per superare la validazione.*/
      title: new FormControl('', [Validators.required]),
      body: new FormControl('', Validators.required)
     });

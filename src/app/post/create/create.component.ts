@@ -1,4 +1,4 @@
-/* Ho utilizzato il reactive form per costruire il componente, 
+/* Ho utilizzato il reactive form per costruire il componente,
 la cui logica è scritta nel file .ts , a differenza del driven form
 la cui logica è scritta nel file html. Utilizzo form group per il controllo generale
 degli input e form control per il controllo del singolo campo di input.
@@ -12,11 +12,16 @@ import { PostService } from '../post.service';
   selector: 'app-create',
   templateUrl: './create.component.html',
   styleUrls: ['./create.component.css']
+
 })
+
+// definizione di una classe "CreateComponent" che implementa l'interfaccia "OnInit"
 export class CreateComponent implements OnInit {
 
 
   // Variabili
+  /** Viene dichiarata una variabile di tipo FormGroup chiamata "form". Tuttavia, viene utilizzato
+   * l'operatore "!" per indicare che la variabile potrebbe essere non inizializzata durante la dichiarazione,  */
   form!: FormGroup;
 //iniezione di dipendenza
   constructor(public postService: PostService, private router: Router) { }
